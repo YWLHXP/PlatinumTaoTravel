@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "XPWelcomeViewController.h"
+#import "XPLoginViewController.h"
+#import "XPNavigationController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[XPWelcomeViewController alloc] init];
+    self.window.rootViewController = [[XPNavigationController alloc] initWithRootViewController:[[XPLoginViewController alloc] init]];
     [self.window makeKeyAndVisible];
     return YES;
 }
