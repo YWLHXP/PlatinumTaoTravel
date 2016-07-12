@@ -28,6 +28,7 @@
 		D81DFECF1D33CDEF0078BE2D /* lead4_3.png in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEBF1D33CDEF0078BE2D /* lead4_3.png */; };
 		D81DFED01D33CDEF0078BE2D /* lead4_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEC01D33CDEF0078BE2D /* lead4_4.png */; };
 		D81DFED81D33CDF50078BE2D /* XPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81DFED51D33CDF50078BE2D /* XPWelcomeViewController.m */; };
+		D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37261D346FD9003DCF36 /* XPHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		D81DFED41D33CDF50078BE2D /* XPWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPWelcomeViewController.h; sourceTree = "<group>"; };
 		D81DFED51D33CDF50078BE2D /* XPWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPWelcomeViewController.m; sourceTree = "<group>"; };
 		D81DFEDB1D33D23F0078BE2D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D89E37251D346FD9003DCF36 /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
+		D89E37261D346FD9003DCF36 /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				D81DFED21D33CDF50078BE2D /* LoginAndRegister(登录注册) */,
+				D89E37211D346FC3003DCF36 /* Home(首页) */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -196,6 +200,39 @@
 				D81DFEDB1D33D23F0078BE2D /* PrefixHeader.pch */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		D89E37211D346FC3003DCF36 /* Home(首页) */ = {
+			isa = PBXGroup;
+			children = (
+				D89E37221D346FC3003DCF36 /* Controller */,
+				D89E37231D346FC3003DCF36 /* Model */,
+				D89E37241D346FC3003DCF36 /* View */,
+			);
+			path = "Home(首页)";
+			sourceTree = "<group>";
+		};
+		D89E37221D346FC3003DCF36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D89E37251D346FD9003DCF36 /* XPHomeViewController.h */,
+				D89E37261D346FD9003DCF36 /* XPHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D89E37231D346FC3003DCF36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D89E37241D346FC3003DCF36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D81DFED81D33CDF50078BE2D /* XPWelcomeViewController.m in Sources */,
+				D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */,
 				D81DFE9C1D33CDC40078BE2D /* AppDelegate.m in Sources */,
 				D81DFE991D33CDC40078BE2D /* main.m in Sources */,
 			);

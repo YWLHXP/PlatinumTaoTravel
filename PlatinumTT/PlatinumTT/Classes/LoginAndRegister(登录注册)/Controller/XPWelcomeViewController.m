@@ -7,6 +7,7 @@
 //
 
 #import "XPWelcomeViewController.h"
+#import "XPHomeViewController.h"
 
 @interface XPWelcomeViewController ()<UIScrollViewDelegate>
 /** scrollView */
@@ -35,8 +36,9 @@
         if (i == 3) {
             imageView.userInteractionEnabled = YES;
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-            btn.frame = CGRectMake(XPScreenWidth/2 - 130, XPScreenHeight * 0.83, 260, 70);
+            btn.frame = CGRectMake(XPScreenWidth/2 - 130, XPScreenHeight * 0.7, 260, 70);
             [btn addTarget:self action:@selector(enter:) forControlEvents:UIControlEventTouchUpInside];
+//            btn.backgroundColor = [UIColor redColor];
             [imageView addSubview:btn];
         }
         [self.scrollView addSubview:imageView];
@@ -51,7 +53,8 @@
 
 -(void)enter:(UIButton *)sender
 {
-    [UIApplication sharedApplication].keyWindow.rootViewController = nil;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[XPHomeViewController new]];
+    [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 }
 
 @end
