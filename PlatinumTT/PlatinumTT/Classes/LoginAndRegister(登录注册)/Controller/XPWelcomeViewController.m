@@ -8,6 +8,7 @@
 
 #import "XPWelcomeViewController.h"
 #import "XPHomeViewController.h"
+#import "XPNavigationController.h"
 
 @interface XPWelcomeViewController ()<UIScrollViewDelegate>
 /** scrollView */
@@ -53,7 +54,7 @@
 
 -(void)enter:(UIButton *)sender
 {
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[XPHomeViewController new]];
+    XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[[XPHomeViewController alloc] init]];
     [UIApplication sharedApplication].keyWindow.rootViewController = nav;
 }
 

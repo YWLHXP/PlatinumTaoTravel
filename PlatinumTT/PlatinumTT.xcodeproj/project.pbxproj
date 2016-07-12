@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42A5EC8F97F4F50D19AB2C01 /* libPods-PlatinumTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD78185DBD264B2044710D90 /* libPods-PlatinumTT.a */; };
 		D81DFE991D33CDC40078BE2D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D81DFE981D33CDC40078BE2D /* main.m */; };
 		D81DFE9C1D33CDC40078BE2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D81DFE9B1D33CDC40078BE2D /* AppDelegate.m */; };
 		D81DFEA41D33CDC40078BE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEA31D33CDC40078BE2D /* Assets.xcassets */; };
@@ -29,9 +30,18 @@
 		D81DFED01D33CDEF0078BE2D /* lead4_4.png in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEC01D33CDEF0078BE2D /* lead4_4.png */; };
 		D81DFED81D33CDF50078BE2D /* XPWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D81DFED51D33CDF50078BE2D /* XPWelcomeViewController.m */; };
 		D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37261D346FD9003DCF36 /* XPHomeViewController.m */; };
+		D89E37291D34720B003DCF36 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D89E37281D34720B003DCF36 /* Podfile */; };
+		D89E372F1D3473CB003DCF36 /* ic-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E372B1D3473CB003DCF36 /* ic-down@2x.png */; };
+		D89E37301D3473CB003DCF36 /* ic-down@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E372C1D3473CB003DCF36 /* ic-down@3x.png */; };
+		D89E37311D3473CB003DCF36 /* ic-user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E372D1D3473CB003DCF36 /* ic-user@2x.png */; };
+		D89E37321D3473CB003DCF36 /* ic-user@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D89E372E1D3473CB003DCF36 /* ic-user@3x.png */; };
+		D89E37391D347465003DCF36 /* XPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37381D347465003DCF36 /* XPNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0598B10FF0448F527731E471 /* Pods-PlatinumTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatinumTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlatinumTT/Pods-PlatinumTT.debug.xcconfig"; sourceTree = "<group>"; };
+		BA85D13E220C5295481BAF09 /* Pods-PlatinumTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatinumTT.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlatinumTT/Pods-PlatinumTT.release.xcconfig"; sourceTree = "<group>"; };
+		BD78185DBD264B2044710D90 /* libPods-PlatinumTT.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlatinumTT.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81DFE941D33CDC40078BE2D /* PlatinumTT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlatinumTT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D81DFE981D33CDC40078BE2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
 		D81DFE9A1D33CDC40078BE2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +70,13 @@
 		D81DFEDB1D33D23F0078BE2D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D89E37251D346FD9003DCF36 /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
 		D89E37261D346FD9003DCF36 /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
+		D89E37281D34720B003DCF36 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D89E372B1D3473CB003DCF36 /* ic-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-down@2x.png"; sourceTree = "<group>"; };
+		D89E372C1D3473CB003DCF36 /* ic-down@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-down@3x.png"; sourceTree = "<group>"; };
+		D89E372D1D3473CB003DCF36 /* ic-user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-user@2x.png"; sourceTree = "<group>"; };
+		D89E372E1D3473CB003DCF36 /* ic-user@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic-user@3x.png"; sourceTree = "<group>"; };
+		D89E37371D347465003DCF36 /* XPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNavigationController.h; sourceTree = "<group>"; };
+		D89E37381D347465003DCF36 /* XPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +84,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A5EC8F97F4F50D19AB2C01 /* libPods-PlatinumTT.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D656C61A9A0A3F44CF80FFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0598B10FF0448F527731E471 /* Pods-PlatinumTT.debug.xcconfig */,
+				BA85D13E220C5295481BAF09 /* Pods-PlatinumTT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D81DFE8B1D33CDC40078BE2D = {
 			isa = PBXGroup;
 			children = (
+				D89E37281D34720B003DCF36 /* Podfile */,
 				D81DFE961D33CDC40078BE2D /* PlatinumTT */,
 				D81DFE951D33CDC40078BE2D /* Products */,
+				4D656C61A9A0A3F44CF80FFF /* Pods */,
+				FF8DAEF4DE3D093A6C19BA58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +140,7 @@
 		D81DFEAE1D33CDEF0078BE2D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D89E372A1D3473CB003DCF36 /* navigation */,
 				D81DFEAF1D33CDEF0078BE2D /* launchimag */,
 				D81DFEB41D33CDEF0078BE2D /* welcome */,
 			);
@@ -150,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				D81DFED21D33CDF50078BE2D /* LoginAndRegister(登录注册) */,
+				D89E37331D34741B003DCF36 /* Main */,
 				D89E37211D346FC3003DCF36 /* Home(首页) */,
 			);
 			path = Classes;
@@ -235,6 +267,59 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D89E372A1D3473CB003DCF36 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D89E372B1D3473CB003DCF36 /* ic-down@2x.png */,
+				D89E372C1D3473CB003DCF36 /* ic-down@3x.png */,
+				D89E372D1D3473CB003DCF36 /* ic-user@2x.png */,
+				D89E372E1D3473CB003DCF36 /* ic-user@3x.png */,
+			);
+			name = navigation;
+			path = welcome/navigation;
+			sourceTree = "<group>";
+		};
+		D89E37331D34741B003DCF36 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D89E37341D34741B003DCF36 /* Controller */,
+				D89E37351D34741B003DCF36 /* Model */,
+				D89E37361D34741B003DCF36 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D89E37341D34741B003DCF36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D89E37371D347465003DCF36 /* XPNavigationController.h */,
+				D89E37381D347465003DCF36 /* XPNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D89E37351D34741B003DCF36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D89E37361D34741B003DCF36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FF8DAEF4DE3D093A6C19BA58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD78185DBD264B2044710D90 /* libPods-PlatinumTT.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,9 +327,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D81DFEAB1D33CDC40078BE2D /* Build configuration list for PBXNativeTarget "PlatinumTT" */;
 			buildPhases = (
+				6E433A897171038C1A8C3799 /* [CP] Check Pods Manifest.lock */,
 				D81DFE901D33CDC40078BE2D /* Sources */,
 				D81DFE911D33CDC40078BE2D /* Frameworks */,
 				D81DFE921D33CDC40078BE2D /* Resources */,
+				22E154AF24563B32A889E464 /* [CP] Embed Pods Frameworks */,
+				342154585430840EF9D6114F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -300,8 +388,12 @@
 				D81DFEC61D33CDEF0078BE2D /* lead1@3x.png in Resources */,
 				D81DFEC71D33CDEF0078BE2D /* lead2@2x.png in Resources */,
 				D81DFEA71D33CDC40078BE2D /* LaunchScreen.storyboard in Resources */,
+				D89E37311D3473CB003DCF36 /* ic-user@2x.png in Resources */,
 				D81DFECB1D33CDEF0078BE2D /* lead4@2x.png in Resources */,
+				D89E37301D3473CB003DCF36 /* ic-down@3x.png in Resources */,
+				D89E372F1D3473CB003DCF36 /* ic-down@2x.png in Resources */,
 				D81DFEC21D33CDEF0078BE2D /* LaunchImage-700@2x.png in Resources */,
+				D89E37291D34720B003DCF36 /* Podfile in Resources */,
 				D81DFEC91D33CDEF0078BE2D /* lead3@2x.png in Resources */,
 				D81DFEC51D33CDEF0078BE2D /* lead1@2x.png in Resources */,
 				D81DFECE1D33CDEF0078BE2D /* lead4_2.png in Resources */,
@@ -311,10 +403,59 @@
 				D81DFECD1D33CDEF0078BE2D /* lead4_1.png in Resources */,
 				D81DFEC81D33CDEF0078BE2D /* lead2@3x.png in Resources */,
 				D81DFEC11D33CDEF0078BE2D /* LaunchImage-700-568h@2x.png in Resources */,
+				D89E37321D3473CB003DCF36 /* ic-user@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22E154AF24563B32A889E464 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlatinumTT/Pods-PlatinumTT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		342154585430840EF9D6114F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlatinumTT/Pods-PlatinumTT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E433A897171038C1A8C3799 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D81DFE901D33CDC40078BE2D /* Sources */ = {
@@ -324,6 +465,7 @@
 				D81DFED81D33CDF50078BE2D /* XPWelcomeViewController.m in Sources */,
 				D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */,
 				D81DFE9C1D33CDC40078BE2D /* AppDelegate.m in Sources */,
+				D89E37391D347465003DCF36 /* XPNavigationController.m in Sources */,
 				D81DFE991D33CDC40078BE2D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +569,7 @@
 		};
 		D81DFEAC1D33CDC40078BE2D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0598B10FF0448F527731E471 /* Pods-PlatinumTT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -440,6 +583,7 @@
 		};
 		D81DFEAD1D33CDC40078BE2D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA85D13E220C5295481BAF09 /* Pods-PlatinumTT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

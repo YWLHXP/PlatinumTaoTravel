@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"铂涛旅行";
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 @end
