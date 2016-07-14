@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "XPWelcomeViewController.h"
-#import "XPLoginViewController.h"
+
+//测试
+#import "XPHomeViewController.h"
 #import "XPNavigationController.h"
 
 @interface AppDelegate ()
@@ -19,8 +21,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [SMSSDK registerApp:MOBAPPKEY withSecret:MOBAPPSECRECT];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[XPNavigationController alloc] initWithRootViewController:[[XPLoginViewController alloc] init]];
+    //测试
+    XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[[XPHomeViewController alloc] init]];
+    self.window.rootViewController = nav;
+    /*[[XPWelcomeViewController alloc] init];*/
     [self.window makeKeyAndVisible];
     return YES;
 }

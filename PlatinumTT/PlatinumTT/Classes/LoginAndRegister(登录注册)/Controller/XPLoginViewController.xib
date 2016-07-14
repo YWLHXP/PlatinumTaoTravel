@@ -49,7 +49,7 @@
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="t5q-XV-uIN">
                             <rect key="frame" x="42" y="0.0" width="402" height="50"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="90t-uy-jIT">
@@ -65,6 +65,9 @@
                             <state key="highlighted">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="getCodeButtonClick:" destination="-1" eventType="touchUpInside" id="hxv-nB-dgm"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DmA-97-2AO">
                             <rect key="frame" x="444" y="15" width="1" height="20"/>
@@ -85,7 +88,7 @@
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sFe-bP-0DD">
                             <rect key="frame" x="43" y="51" width="497" height="50"/>
                             <animations/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                     </subviews>
@@ -141,6 +144,9 @@
                         <color key="titleColor" red="1" green="0.4530744169" blue="0.10935673949999999" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <state key="highlighted" title="账号密码登录&gt;"/>
+                    <connections>
+                        <action selector="accountAndPwdLogin:" destination="-1" eventType="touchUpInside" id="QrL-fb-TzO"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="其它方式登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fW9-EP-AjS">
                     <rect key="frame" x="239" y="434" width="123" height="26"/>
@@ -205,6 +211,7 @@
                 <constraint firstItem="QKd-0P-Mci" firstAttribute="leading" secondItem="s9G-cQ-mB8" secondAttribute="trailing" id="wGZ-eC-E37"/>
                 <constraint firstItem="Rhd-bi-quO" firstAttribute="top" secondItem="qbt-Qm-Hpl" secondAttribute="bottom" constant="10" id="zKC-Jl-eI7"/>
             </constraints>
+            <point key="canvasLocation" x="424" y="344"/>
         </view>
     </objects>
     <resources>
