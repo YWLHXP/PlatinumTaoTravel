@@ -19,7 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *getCodeBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *sureButton;
-
+/** timer */
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation XPNewPwdViewController
@@ -40,7 +41,8 @@
     _number = 0;
     [self.getCodeBtn setTitle:@"60秒" forState:UIControlStateDisabled];
     [self.getCodeBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 
@@ -52,7 +54,7 @@
         [self.getCodeBtn setTitle:str forState:UIControlStateDisabled];
         [self.getCodeBtn setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
     }else{
-        [_timer invalidate];
+        [self.timer invalidate];
         self.getCodeBtn.enabled = YES;
         [self.getCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
         [self showTooltip:@"请求超时，请重新获取"];
@@ -68,10 +70,15 @@
     [hud hide:YES afterDelay:2];
 }
 
+-(void)dealloc
+{
+    [self.timer invalidate];
+}
+
 #pragma mark -UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    //判断手机号是否为11位
+    
     if (self.codeField.text.length == 4 ) {
         self.sureButton.enabled = YES;
         [self.sureButton setBackgroundImage:[UIImage imageNamed:@"bgBtnDis"] forState:UIControlStateNormal];

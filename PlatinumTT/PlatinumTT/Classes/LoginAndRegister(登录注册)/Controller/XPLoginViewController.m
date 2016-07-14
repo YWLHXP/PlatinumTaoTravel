@@ -14,6 +14,8 @@
 #import "XPNavigationController.h"
 #import "LViewPushAnimation.h"
 #import <ShareSDK/ShareSDK.h>
+#import "XPBindPhoneViewController.h"
+#import "LViewPushAnimation.h"
 
 @interface XPLoginViewController ()<UITextFieldDelegate>
 {
@@ -28,22 +30,15 @@
 //获取验证码
 @property (weak, nonatomic) IBOutlet UIButton *getCodeButton;
 
+/** timer */
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation XPLoginViewController
 
 - (IBAction)loginButtonClick:(id)sender {
     
-    /**
-     * @from               v1.1.1
-     * @brief              提交验证码(Commit the verification code)
-     *
-     * @param code         验证码(Verification code)
-     * @param phoneNumber  电话号码(The phone number)
-     * @param zone         区域号，不要加"+"号(Area code)
-     * @param result       请求结果回调(Results of the request)
-     */
-    [SMSSDK commitVerificationCode:self.verificationCodeTextField.text phoneNumber:self.phoneTextField.text zone:@"86" result:^(NSError *error) {
+      [SMSSDK commitVerificationCode:self.verificationCodeTextField.text phoneNumber:self.phoneTextField.text zone:@"86" result:^(NSError *error) {
         
         if (!error) {
             
@@ -115,6 +110,7 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     //去掉背景下的阴影
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    
 }
 
 -(void)keyboardFrameChange:(NSNotification*)noti{
@@ -167,16 +163,6 @@
     
     //倒计时
     [self theCountdown];
-    /**
-     *  @from                    v1.1.1
-     *  @brief                   获取验证码(Get verification code)
-     *
-     *  @param method            获取验证码的方法(The method of getting verificationCode)
-     *  @param phoneNumber       电话号码(The phone number)
-     *  @param zone              区域号，不要加"+"号(Area code)
-     *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
-     *  @param result            请求结果回调(Results of the request)
-     */
     
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
                             phoneNumber:self.phoneTextField.text
@@ -185,6 +171,9 @@
                                            NSLog(@"error %@",error);
                                        }else{
                                          [self showTooltip:@"验证码已发送到你的手机，请注意查收哦"];
+                                        [self.timer invalidate];
+                                        [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+
                                        }
                                    }];
     
@@ -197,7 +186,8 @@
     _number = 0;
     [self.getCodeButton setTitle:@"60秒" forState:UIControlStateDisabled];
     [self.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)timerFired:(NSTimer *)_timer
@@ -208,11 +198,17 @@
         [self.getCodeButton setTitle:str forState:UIControlStateDisabled];
         [self.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
        }else{
-        [_timer invalidate];
+        [self.timer invalidate];
         self.getCodeButton.enabled = YES;
         [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
         [self showTooltip:@"请求超时，请重新获取"];
     }
+}
+
+-(void)dealloc
+{
+    [self.timer invalidate];
+    [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
 }
 
 - (IBAction)qqLogin:(id)sender {
@@ -226,7 +222,11 @@
              NSLog(@"%@",user.credential);
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
-             NSLog(@"登录QQ成功");
+           //  [self showTooltip:@"QQ登录成功"];
+             XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[XPBindPhoneViewController new]];
+             [LViewPushAnimation viewCtlPushAndPopWithAnimationCtl:self andSubtypes:kCATransitionFromRight];
+             [self presentViewController:nav animated:NO completion:nil];
+
          }
          
          else
@@ -249,7 +249,11 @@
              NSLog(@"%@",user.credential);
              NSLog(@"token=%@",user.credential.token);
              NSLog(@"nickname=%@",user.nickname);
-             NSLog(@"登录微信成功");
+          //   [self showTooltip:@"微信登录成功"];
+             XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[XPBindPhoneViewController new]];
+             [LViewPushAnimation viewCtlPushAndPopWithAnimationCtl:self andSubtypes:kCATransitionFromRight];
+             [self presentViewController:nav animated:NO completion:nil];
+
          }
          
          else

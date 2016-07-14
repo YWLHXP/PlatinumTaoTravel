@@ -72,6 +72,8 @@
 		D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37261D346FD9003DCF36 /* XPHomeViewController.m */; };
 		D89E37291D34720B003DCF36 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D89E37281D34720B003DCF36 /* Podfile */; };
 		D89E37391D347465003DCF36 /* XPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37381D347465003DCF36 /* XPNavigationController.m */; };
+		D8E530471D37B92F00041C7C /* XPBindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E530451D37B92F00041C7C /* XPBindPhoneViewController.m */; };
+		D8E530481D37B92F00041C7C /* XPBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E530461D37B92F00041C7C /* XPBindPhoneViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -182,6 +184,9 @@
 		D89E37281D34720B003DCF36 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D89E37371D347465003DCF36 /* XPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNavigationController.h; sourceTree = "<group>"; };
 		D89E37381D347465003DCF36 /* XPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNavigationController.m; sourceTree = "<group>"; };
+		D8E530441D37B92F00041C7C /* XPBindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBindPhoneViewController.h; sourceTree = "<group>"; };
+		D8E530451D37B92F00041C7C /* XPBindPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBindPhoneViewController.m; sourceTree = "<group>"; };
+		D8E530461D37B92F00041C7C /* XPBindPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPBindPhoneViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,6 +348,9 @@
 				851E9BB31D3525AE0085A5EA /* XPLoginViewController.h */,
 				851E9BB41D3525AE0085A5EA /* XPLoginViewController.m */,
 				851E9BB51D3525AE0085A5EA /* XPLoginViewController.xib */,
+				D8E530441D37B92F00041C7C /* XPBindPhoneViewController.h */,
+				D8E530451D37B92F00041C7C /* XPBindPhoneViewController.m */,
+				D8E530461D37B92F00041C7C /* XPBindPhoneViewController.xib */,
 				D84AAAB41D365B6700467D25 /* XPNewPwdViewController.h */,
 				D84AAAB51D365B6700467D25 /* XPNewPwdViewController.m */,
 				D84AAAB61D365B6700467D25 /* XPNewPwdViewController.xib */,
@@ -604,6 +612,7 @@
 				851E9B9A1D3525600085A5EA /* backbutton@2x.png in Resources */,
 				D84AAAC21D36754200467D25 /* XPAddInformationViewController.xib in Resources */,
 				851E9BA71D3525600085A5EA /* ic-wechat@3x.png in Resources */,
+				D8E530481D37B92F00041C7C /* XPBindPhoneViewController.xib in Resources */,
 				851E9BA51D3525600085A5EA /* ic-qq@3x.png in Resources */,
 				851E9B9E1D3525600085A5EA /* ic-back@2x.png in Resources */,
 				D84AAABD1D366D7700467D25 /* XPSetPwdViewController.xib in Resources */,
@@ -713,6 +722,7 @@
 				851E9BC31D3525AE0085A5EA /* UIView+frame.m in Sources */,
 				851E9B451D34F08C0085A5EA /* DataManager.m in Sources */,
 				851E9B671D34F0C70085A5EA /* SDImageCache.m in Sources */,
+				D8E530471D37B92F00041C7C /* XPBindPhoneViewController.m in Sources */,
 				851E9B3F1D34EF540085A5EA /* UIView+XPExtension.m in Sources */,
 				851E9B461D34F08C0085A5EA /* NetworkManager.m in Sources */,
 				851E9B6F1D34F0C70085A5EA /* UIImage+GIF.m in Sources */,
