@@ -47,11 +47,6 @@
 
 - (void)configNavigation
 {
-//    //去掉前面的图片  设置背景图片 为 一个没有内容 image 对象
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//    //去掉背景下的阴影
-//    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.size = CGSizeMake(30, 30);
     [button setImage:[UIImage imageNamed:@"backbutton"] forState:UIControlStateNormal];

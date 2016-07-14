@@ -20,8 +20,16 @@
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    self.tableView.tableHeaderView = [self tableHeaderView];
 }
 
+- (UIView *)tableHeaderView
+{
+    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(XPScreenWidth, 250, 0, 0)];
+    headView.backgroundColor = [UIColor colorWithRed:251/255.0 green:75/255.0 blue:18/255.0 alpha:1];
+    return headView;
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

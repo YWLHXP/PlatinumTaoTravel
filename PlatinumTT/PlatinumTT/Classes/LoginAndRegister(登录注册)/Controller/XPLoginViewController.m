@@ -149,12 +149,6 @@
         [self.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         self.loginButton.enabled = NO;
     }
-    
-//    NSString * phoneString = [self.phoneTextField.text stringByReplacingCharactersInRange:range withString:string];
-//    if (phoneString.length > 11 && range.length!=1){
-//        self.phoneTextField.text = [phoneString substringToIndex:11];
-//        return NO;
-//    }
 
     return YES;
 }

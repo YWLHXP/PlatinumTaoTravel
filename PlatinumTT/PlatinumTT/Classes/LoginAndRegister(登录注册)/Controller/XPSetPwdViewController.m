@@ -33,6 +33,7 @@
     [self configNavigation];
 }
 
+#pragma mark - 配置导航栏
 - (void)configNavigation
 {
    
@@ -45,11 +46,6 @@
     [button addTarget:self action:@selector(leftBtnClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 }
-
-//-(void)viewWillAppear:(BOOL)animated
-//{
-//    self.navigationController.navigationBar.translucent = YES;
-//}
 
 - (void)leftBtnClick
 {
