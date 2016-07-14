@@ -3,6 +3,9 @@ target 'PlatinumTT' do
 pod 'AFNetworking'
 pod 'MBProgressHUD'
 pod 'MJRefresh'
-pod 'MOBFoundation_IDFA'
 pod 'SMSSDK'
+pod 'MOBFoundation_IDFA'
+pod 'ShareSDK3'
+pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
 end

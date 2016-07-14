@@ -13,6 +13,7 @@
 #import "XPSetPwdViewController.h"
 #import "XPNavigationController.h"
 #import "LViewPushAnimation.h"
+#import <ShareSDK/ShareSDK.h>
 
 @interface XPLoginViewController ()<UITextFieldDelegate>
 {
@@ -206,13 +207,60 @@
         NSString *str = [NSString stringWithFormat:@"%ld秒", (long)_count];
         [self.getCodeButton setTitle:str forState:UIControlStateDisabled];
         [self.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateDisabled];
-    }else{
+       }else{
         [_timer invalidate];
         self.getCodeButton.enabled = YES;
         [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [self showTooltip:@"请求超时，请重新获取"];
     }
 }
 
+- (IBAction)qqLogin:(id)sender {
+    [ShareSDK getUserInfo:SSDKPlatformTypeQQ
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+     {
+         if (state == SSDKResponseStateSuccess)
+         {
+             
+             NSLog(@"uid=%@",user.uid);
+             NSLog(@"%@",user.credential);
+             NSLog(@"token=%@",user.credential.token);
+             NSLog(@"nickname=%@",user.nickname);
+             NSLog(@"登录QQ成功");
+         }
+         
+         else
+         {
+             NSLog(@"%@",error);
+             NSLog(@"请确认安装了QQ");
+         }
+         
+     }];
+
+}
+- (IBAction)weiXinLogin:(id)sender {
+    [ShareSDK getUserInfo:SSDKPlatformTypeWechat
+           onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
+     {
+         if (state == SSDKResponseStateSuccess)
+         {
+             
+             NSLog(@"uid=%@",user.uid);
+             NSLog(@"%@",user.credential);
+             NSLog(@"token=%@",user.credential.token);
+             NSLog(@"nickname=%@",user.nickname);
+             NSLog(@"登录微信成功");
+         }
+         
+         else
+         {
+             NSLog(@"%@",error);
+             NSLog(@"请确认安装了微信");
+         }
+         
+     }];
+
+}
 
 - (void)showTooltip:(NSString *)tip
 {

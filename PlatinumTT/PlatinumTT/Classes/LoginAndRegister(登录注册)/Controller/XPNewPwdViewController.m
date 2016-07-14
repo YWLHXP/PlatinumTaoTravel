@@ -55,6 +55,7 @@
         [_timer invalidate];
         self.getCodeBtn.enabled = YES;
         [self.getCodeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+        [self showTooltip:@"请求超时，请重新获取"];
     }
 }
 

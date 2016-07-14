@@ -13,6 +13,14 @@
 #import "XPHomeViewController.h"
 #import "XPNavigationController.h"
 
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+//腾讯开放平台SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+//微信SDK头文件
+#import "WXApi.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,7 +30,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [SMSSDK registerApp:MOBAPPKEY withSecret:MOBAPPSECRECT];
+    //短信
+    [SMSSDK registerApp:MOBAPPKEY_SMS withSecret:MOBAPPSECRECT_SMS];
+    
+    
+    //初始化SDK并且初始化第三方平台
+    [self initializePlat];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     //测试
@@ -32,6 +45,46 @@
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+
+- (void)initializePlat
+{
+    [ShareSDK registerApp:MOBAPPKEY_3Login
+     
+          activePlatforms:@[
+                            @(SSDKPlatformTypeWechat),
+                            @(SSDKPlatformTypeQQ),]
+                 onImport:^(SSDKPlatformType platformType)
+     {
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [ShareSDKConnector connectWeChat:[WXApi class]];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
+                 break;
+              default:
+                 break;
+         }
+     }
+          onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+     {
+         
+         switch (platformType)
+         {
+             case SSDKPlatformTypeWechat:
+                 [appInfo SSDKSetupWeChatByAppId:MOBAPPKEY_WeiXin appSecret:MOBAPPSECRECT_WeiXin];
+                 break;
+             case SSDKPlatformTypeQQ:
+                 [appInfo SSDKSetupQQByAppId:MOBAPPKEY_QQ appKey:MOBAPPSECRECT_QQ authType:SSDKAuthTypeBoth];
+                 break;
+            default:
+                 break;
+         }
+     }];
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

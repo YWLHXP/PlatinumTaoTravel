@@ -167,6 +167,9 @@
                         <constraint firstAttribute="height" constant="40" id="kkb-0D-Mee"/>
                     </constraints>
                     <state key="normal" title="Button" image="ic-qq.png"/>
+                    <connections>
+                        <action selector="qqLogin:" destination="-1" eventType="touchUpInside" id="5ai-xd-ZTh"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKd-0P-Mci">
                     <rect key="frame" x="283" y="494" width="35" height="21"/>
@@ -187,6 +190,9 @@
                         <constraint firstAttribute="height" constant="40" id="xFJ-WI-7mg"/>
                     </constraints>
                     <state key="normal" title="Button" image="ic-wechat.png"/>
+                    <connections>
+                        <action selector="weiXinLogin:" destination="-1" eventType="touchUpInside" id="45m-9T-b34"/>
+                    </connections>
                 </button>
             </subviews>
             <animations/>
