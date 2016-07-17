@@ -61,17 +61,18 @@
 		D81DFE9C1D33CDC40078BE2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D81DFE9B1D33CDC40078BE2D /* AppDelegate.m */; };
 		D81DFEA41D33CDC40078BE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEA31D33CDC40078BE2D /* Assets.xcassets */; };
 		D81DFEA71D33CDC40078BE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81DFEA51D33CDC40078BE2D /* LaunchScreen.storyboard */; };
+		D8280F891D38FBE200A72E15 /* XPMyMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8280F881D38FBE200A72E15 /* XPMyMessageViewController.m */; };
+		D836E8961D39E61E005FC209 /* UITextField+TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D836E8951D39E61E005FC209 /* UITextField+TextField.m */; };
 		D84372951D35E2960097B4C8 /* LViewPushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D84372941D35E2960097B4C8 /* LViewPushAnimation.m */; };
 		D84AAAB71D365B6700467D25 /* XPNewPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84AAAB51D365B6700467D25 /* XPNewPwdViewController.m */; };
 		D84AAAB81D365B6700467D25 /* XPNewPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84AAAB61D365B6700467D25 /* XPNewPwdViewController.xib */; };
 		D84AAABC1D366D7700467D25 /* XPSetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84AAABA1D366D7700467D25 /* XPSetPwdViewController.m */; };
 		D84AAABD1D366D7700467D25 /* XPSetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84AAABB1D366D7700467D25 /* XPSetPwdViewController.xib */; };
-		D84AAAC11D36754200467D25 /* XPAddInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84AAABF1D36754200467D25 /* XPAddInformationViewController.m */; };
-		D84AAAC21D36754200467D25 /* XPAddInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D84AAAC01D36754200467D25 /* XPAddInformationViewController.xib */; };
-		D84AAAC51D367CE600467D25 /* XPMyMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D84AAAC41D367CE600467D25 /* XPMyMessageViewController.m */; };
 		D89E37271D346FD9003DCF36 /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37261D346FD9003DCF36 /* XPHomeViewController.m */; };
 		D89E37291D34720B003DCF36 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D89E37281D34720B003DCF36 /* Podfile */; };
 		D89E37391D347465003DCF36 /* XPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D89E37381D347465003DCF36 /* XPNavigationController.m */; };
+		D8D9D6C61D39D4DC00A363A2 /* XPAddInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D9D6C41D39D4DC00A363A2 /* XPAddInformationViewController.m */; };
+		D8D9D6C71D39D4DC00A363A2 /* XPAddInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8D9D6C51D39D4DC00A363A2 /* XPAddInformationViewController.xib */; };
 		D8E530471D37B92F00041C7C /* XPBindPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8E530451D37B92F00041C7C /* XPBindPhoneViewController.m */; };
 		D8E530481D37B92F00041C7C /* XPBindPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8E530461D37B92F00041C7C /* XPBindPhoneViewController.xib */; };
 /* End PBXBuildFile section */
@@ -166,6 +167,10 @@
 		D81DFEA61D33CDC40078BE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D81DFEA81D33CDC40078BE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		D81DFEDB1D33D23F0078BE2D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D8280F871D38FBE200A72E15 /* XPMyMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMyMessageViewController.h; sourceTree = "<group>"; };
+		D8280F881D38FBE200A72E15 /* XPMyMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMyMessageViewController.m; sourceTree = "<group>"; };
+		D836E8941D39E61E005FC209 /* UITextField+TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+TextField.h"; sourceTree = "<group>"; };
+		D836E8951D39E61E005FC209 /* UITextField+TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+TextField.m"; sourceTree = "<group>"; };
 		D84372931D35E2960097B4C8 /* LViewPushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LViewPushAnimation.h; sourceTree = "<group>"; };
 		D84372941D35E2960097B4C8 /* LViewPushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LViewPushAnimation.m; sourceTree = "<group>"; };
 		D84AAAB41D365B6700467D25 /* XPNewPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNewPwdViewController.h; sourceTree = "<group>"; };
@@ -174,16 +179,14 @@
 		D84AAAB91D366D7700467D25 /* XPSetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSetPwdViewController.h; sourceTree = "<group>"; };
 		D84AAABA1D366D7700467D25 /* XPSetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSetPwdViewController.m; sourceTree = "<group>"; };
 		D84AAABB1D366D7700467D25 /* XPSetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPSetPwdViewController.xib; sourceTree = "<group>"; };
-		D84AAABE1D36754200467D25 /* XPAddInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAddInformationViewController.h; sourceTree = "<group>"; };
-		D84AAABF1D36754200467D25 /* XPAddInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAddInformationViewController.m; sourceTree = "<group>"; };
-		D84AAAC01D36754200467D25 /* XPAddInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPAddInformationViewController.xib; sourceTree = "<group>"; };
-		D84AAAC31D367CE600467D25 /* XPMyMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPMyMessageViewController.h; sourceTree = "<group>"; };
-		D84AAAC41D367CE600467D25 /* XPMyMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPMyMessageViewController.m; sourceTree = "<group>"; };
 		D89E37251D346FD9003DCF36 /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
 		D89E37261D346FD9003DCF36 /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
 		D89E37281D34720B003DCF36 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D89E37371D347465003DCF36 /* XPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPNavigationController.h; sourceTree = "<group>"; };
 		D89E37381D347465003DCF36 /* XPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPNavigationController.m; sourceTree = "<group>"; };
+		D8D9D6C31D39D4DC00A363A2 /* XPAddInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAddInformationViewController.h; sourceTree = "<group>"; };
+		D8D9D6C41D39D4DC00A363A2 /* XPAddInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAddInformationViewController.m; sourceTree = "<group>"; };
+		D8D9D6C51D39D4DC00A363A2 /* XPAddInformationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPAddInformationViewController.xib; sourceTree = "<group>"; };
 		D8E530441D37B92F00041C7C /* XPBindPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPBindPhoneViewController.h; sourceTree = "<group>"; };
 		D8E530451D37B92F00041C7C /* XPBindPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPBindPhoneViewController.m; sourceTree = "<group>"; };
 		D8E530461D37B92F00041C7C /* XPBindPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XPBindPhoneViewController.xib; sourceTree = "<group>"; };
@@ -357,11 +360,11 @@
 				D84AAAB91D366D7700467D25 /* XPSetPwdViewController.h */,
 				D84AAABA1D366D7700467D25 /* XPSetPwdViewController.m */,
 				D84AAABB1D366D7700467D25 /* XPSetPwdViewController.xib */,
-				D84AAABE1D36754200467D25 /* XPAddInformationViewController.h */,
-				D84AAABF1D36754200467D25 /* XPAddInformationViewController.m */,
-				D84AAAC01D36754200467D25 /* XPAddInformationViewController.xib */,
-				D84AAAC31D367CE600467D25 /* XPMyMessageViewController.h */,
-				D84AAAC41D367CE600467D25 /* XPMyMessageViewController.m */,
+				D8D9D6C31D39D4DC00A363A2 /* XPAddInformationViewController.h */,
+				D8D9D6C41D39D4DC00A363A2 /* XPAddInformationViewController.m */,
+				D8D9D6C51D39D4DC00A363A2 /* XPAddInformationViewController.xib */,
+				D8280F871D38FBE200A72E15 /* XPMyMessageViewController.h */,
+				D8280F881D38FBE200A72E15 /* XPMyMessageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,8 @@
 				D84372941D35E2960097B4C8 /* LViewPushAnimation.m */,
 				851E9BBA1D3525AE0085A5EA /* UIView+frame.h */,
 				851E9BBB1D3525AE0085A5EA /* UIView+frame.m */,
+				D836E8941D39E61E005FC209 /* UITextField+TextField.h */,
+				D836E8951D39E61E005FC209 /* UITextField+TextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -609,8 +614,8 @@
 				D81DFEA71D33CDC40078BE2D /* LaunchScreen.storyboard in Resources */,
 				851E9BA31D3525600085A5EA /* ic-phone@3x.png in Resources */,
 				851E9BAA1D3525600085A5EA /* weizhi.png in Resources */,
+				D8D9D6C71D39D4DC00A363A2 /* XPAddInformationViewController.xib in Resources */,
 				851E9B9A1D3525600085A5EA /* backbutton@2x.png in Resources */,
-				D84AAAC21D36754200467D25 /* XPAddInformationViewController.xib in Resources */,
 				851E9BA71D3525600085A5EA /* ic-wechat@3x.png in Resources */,
 				D8E530481D37B92F00041C7C /* XPBindPhoneViewController.xib in Resources */,
 				851E9BA51D3525600085A5EA /* ic-qq@3x.png in Resources */,
@@ -692,6 +697,7 @@
 			files = (
 				851E9BC01D3525AE0085A5EA /* XPLoginViewController.m in Sources */,
 				851E9B721D34F0C70085A5EA /* UIImageView+WebCache.m in Sources */,
+				D836E8961D39E61E005FC209 /* UITextField+TextField.m in Sources */,
 				851E9B691D34F0C70085A5EA /* SDWebImageDecoder.m in Sources */,
 				851E9B6C1D34F0C70085A5EA /* SDWebImageManager.m in Sources */,
 				851E9BC21D3525AE0085A5EA /* XPWelcomeViewController.m in Sources */,
@@ -712,13 +718,12 @@
 				851E9B711D34F0C70085A5EA /* UIImageView+HighlightedWebCache.m in Sources */,
 				851E9BBC1D3525AE0085A5EA /* XPAccountAndLoginViewController.m in Sources */,
 				851E9B701D34F0C70085A5EA /* UIImage+MultiFormat.m in Sources */,
-				D84AAAC11D36754200467D25 /* XPAddInformationViewController.m in Sources */,
 				D84AAAB71D365B6700467D25 /* XPNewPwdViewController.m in Sources */,
 				851E9BBE1D3525AE0085A5EA /* XPForgetPwdViewController.m in Sources */,
-				D84AAAC51D367CE600467D25 /* XPMyMessageViewController.m in Sources */,
 				851E9B7F1D34F9730085A5EA /* BrandModel.m in Sources */,
 				851E9B7C1D34F6E60085A5EA /* ThreeInOneModel.m in Sources */,
 				851E9B821D34FBE30085A5EA /* ThreeInOneTableViewCell.m in Sources */,
+				D8280F891D38FBE200A72E15 /* XPMyMessageViewController.m in Sources */,
 				851E9BC31D3525AE0085A5EA /* UIView+frame.m in Sources */,
 				851E9B451D34F08C0085A5EA /* DataManager.m in Sources */,
 				851E9B671D34F0C70085A5EA /* SDImageCache.m in Sources */,
@@ -727,6 +732,7 @@
 				851E9B461D34F08C0085A5EA /* NetworkManager.m in Sources */,
 				851E9B6F1D34F0C70085A5EA /* UIImage+GIF.m in Sources */,
 				851E9B6A1D34F0C70085A5EA /* SDWebImageDownloader.m in Sources */,
+				D8D9D6C61D39D4DC00A363A2 /* XPAddInformationViewController.m in Sources */,
 				D81DFE991D33CDC40078BE2D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
+/** isFirst */
+@property (nonatomic, assign) BOOL isFirst;
 @end
 

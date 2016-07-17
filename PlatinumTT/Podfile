@@ -8,4 +8,5 @@ pod 'MOBFoundation_IDFA'
 pod 'ShareSDK3'
 pod 'ShareSDK3/ShareSDKPlatforms/QQ'
 pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+pod 'BmobSDK'
 end

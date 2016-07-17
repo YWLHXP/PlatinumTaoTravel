@@ -11,6 +11,8 @@
 #import "UIView+frame.h"
 #import "XPForgetPwdViewController.h"
 #import "LViewPushAnimation.h"
+#import "UITextField+TextField.h"
+#import <MBProgressHUD.h>
 
 @interface XPAccountAndLoginViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIView *bgView;
@@ -42,6 +44,7 @@
     [self configNavigation];
     
     self.phoneTextField.delegate = self;
+    [self.phoneTextField textLength:11];
 
 }
 
@@ -90,6 +93,21 @@
 #pragma mark -UITextFieldDelegate
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    NSCharacterSet *cs;
+    if(textField == self.phoneTextField)
+    {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+        BOOL basicTest = [string isEqualToString:filtered];
+        if(!basicTest)
+        {
+            if (string.length <= 11) {
+                [self showTooltip:@"亲，请正确的输入11位手机号"];
+                return NO;
+            }
+        }
+    }
+    
     //判断手机号是否为11位
     if (self.phoneTextField.text.length == 10 ) {
         self.loginButton.enabled = YES;
@@ -98,5 +116,14 @@
         self.loginButton.enabled = NO;
     }
     return YES;
+}
+
+- (void)showTooltip:(NSString *)tip
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = NSLocalizedString(tip, @"HUD message title");
+    hud.labelFont = [UIFont systemFontOfSize:13];
+    [hud hide:YES afterDelay:2];
 }
 @end

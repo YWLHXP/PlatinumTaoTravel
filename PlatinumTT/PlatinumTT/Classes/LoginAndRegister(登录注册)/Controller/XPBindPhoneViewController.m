@@ -95,6 +95,7 @@
     [self.timer invalidate];
 }
 
+//提高按钮
 - (IBAction)updateButtonClick:(id)sender {
     [self.navigationController pushViewController:[XPHomeViewController new] animated:YES];
 }

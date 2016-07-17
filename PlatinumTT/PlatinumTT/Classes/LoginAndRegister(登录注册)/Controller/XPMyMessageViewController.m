@@ -2,59 +2,36 @@
 //  XPMyMessageViewController.m
 //  PlatinumTT
 //
-//  Created by dragon on 16/7/13.
+//  Created by dragon on 16/7/15.
 //  Copyright © 2016年 win. All rights reserved.
 //
 
 #import "XPMyMessageViewController.h"
 
-@interface XPMyMessageViewController ()<UITableViewDelegate,UITableViewDataSource>
-/** tableView */
-@property (nonatomic, strong) UITableView *tableView;
+@interface XPMyMessageViewController ()
+
 @end
 
 @implementation XPMyMessageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    
-    self.tableView.tableHeaderView = [self tableHeaderView];
+    // Do any additional setup after loading the view.
 }
 
-- (UIView *)tableHeaderView
-{
-    UIView *headView = [[UIView alloc] initWithFrame:CGRectMake(XPScreenWidth, 250, 0, 0)];
-    headView.backgroundColor = [UIColor colorWithRed:251/255.0 green:75/255.0 blue:18/255.0 alpha:1];
-    return headView;
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 2;
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return 1;
-    }else
-    {
-        return 3;
-    }
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    return cell;
-}
+*/
 
 @end

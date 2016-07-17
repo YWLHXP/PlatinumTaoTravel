@@ -16,6 +16,7 @@
 #import <ShareSDK/ShareSDK.h>
 #import "XPBindPhoneViewController.h"
 #import "LViewPushAnimation.h"
+#import "UITextField+TextField.h"
 
 @interface XPLoginViewController ()<UITextFieldDelegate>
 {
@@ -32,6 +33,8 @@
 
 /** timer */
 @property (nonatomic, strong) NSTimer *timer;
+/** isPhoneNumber */
+@property (nonatomic, assign) BOOL isPhoneNumber;
 @end
 
 @implementation XPLoginViewController
@@ -42,7 +45,12 @@
         
         if (!error) {
             
-            [self showTooltip:@"验证码已发送到你的手机，请注意查收哦"];
+            
+            [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+            [self.timer invalidate];
+            XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[XPSetPwdViewController new]];
+            [LViewPushAnimation viewCtlPushAndPopWithAnimationCtl:self andSubtypes:kCATransitionFromRight];
+            [self presentViewController:nav animated:NO completion:nil];
             
         }
         else
@@ -51,11 +59,6 @@
             
         }
     }];
-    
-    XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[XPSetPwdViewController new]];
-    [LViewPushAnimation viewCtlPushAndPopWithAnimationCtl:self andSubtypes:kCATransitionFromRight];
-    [self presentViewController:nav animated:NO completion:nil];
-    
 }
 
 //账号密码登录
@@ -77,6 +80,11 @@
     self.navigationController.navigationBar.translucent = YES;
     
     self.phoneTextField.delegate = self;
+    
+    //限制长度方式一
+    [self.phoneTextField textLength:11];
+    
+    [self.phoneTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)configNavigation
@@ -99,7 +107,7 @@
 
 - (void)leftBtnClick
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -137,40 +145,66 @@
     [self.view endEditing:YES];
 }
 
-#pragma mark -UITextFieldDelegate
+
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    //判断手机号是否为11位
-    if (self.phoneTextField.text.length == 10 ) {
+    NSCharacterSet *cs;
+    if(textField == self.phoneTextField)
+    {
+        cs = [[NSCharacterSet characterSetWithCharactersInString:NUMBERS] invertedSet];
+        NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs] componentsJoinedByString:@""];
+        BOOL basicTest = [string isEqualToString:filtered];
+        if(!basicTest)//不是数字
+        {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+//判断是否是11位
+- (void)textFieldDidChange:(UITextField *)textField
+{
+    if (textField.text.length == 11) {
         [self.getCodeButton setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         self.loginButton.enabled = YES;
+        
+        self.isPhoneNumber = [UITextField isNumberPhone:self.phoneTextField.text];
     }else
     {
         [self.getCodeButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         self.loginButton.enabled = NO;
     }
-
-    return YES;
 }
 
 - (IBAction)getCodeButtonClick:(id)sender {
     
-    //倒计时
-    [self theCountdown];
     
-    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
-                            phoneNumber:self.phoneTextField.text
-                                   zone:@"86" customIdentifier:nil result:^(NSError *error) {
-                                       if (error) {
-                                           NSLog(@"error %@",error);
-                                       }else{
-                                         [self showTooltip:@"验证码已发送到你的手机，请注意查收哦"];
-                                        [self.timer invalidate];
-                                        [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+    self.isPhoneNumber = [UITextField isNumberPhone:self.phoneTextField.text];
+    if (self.isPhoneNumber) {
+        //倒计时
+        [self theCountdown];
+        
+        [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS
+                                phoneNumber:self.phoneTextField.text
+                                       zone:@"86" customIdentifier:nil result:^(NSError *error) {
+                                           if (error) {
+                                               NSLog(@"error %@",error);
+                                    
+                                           }else{
+                                               [self showTooltip:@"验证码已发送到你的手机，请注意查收哦"];
+                                                  [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+                                               [self.timer invalidate];
+                                            
+                                               
+                                           }
+                                       }];
 
-                                       }
-                                   }];
-    
+    }else
+    {
+        [self showTooltip:@"手机号不正确，请重新输入"];
+        return;
+    }
 }
 
 - (void)theCountdown
@@ -199,12 +233,13 @@
     }
 }
 
--(void)dealloc
-{
-    [self.timer invalidate];
-    [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-}
+//-(void)dealloc
+//{
+//    [self.timer invalidate];
+//    [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
+//}
 
+#pragma mark - QQ登录
 - (IBAction)qqLogin:(id)sender {
     [ShareSDK getUserInfo:SSDKPlatformTypeQQ
            onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)
@@ -232,6 +267,8 @@
      }];
 
 }
+
+#pragma mark - 微信登录
 - (IBAction)weiXinLogin:(id)sender {
     [ShareSDK getUserInfo:SSDKPlatformTypeWechat
            onStateChanged:^(SSDKResponseState state, SSDKUser *user, NSError *error)

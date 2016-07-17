@@ -11,6 +11,7 @@
 #import <AFNetworking.h>
 #import <MJRefresh.h>
 #import <SMS_SDK/SMSSDK.h>
+#import <BmobSDK/Bmob.h>
 
 /** 短信验证 */
 #define MOBAPPKEY_SMS  @"f791019fe48a"
@@ -27,7 +28,11 @@
 #define MOBAPPKEY_QQ  @"100371282"
 #define MOBAPPSECRECT_QQ @"aed9b0303e3ed1e27bae87c33761161d"
 
+//Bmob
+#define BMOBAPPKEY @"df7dc327fd6e3c136d96a357d2281aa6"
+
 #define XPScreenWidth [UIScreen mainScreen].bounds.size.width
 #define XPScreenHeight [UIScreen mainScreen].bounds.size.height
+#define NUMBERS @"0123456789\n"
 
 #endif /* PrefixHeader_pch */

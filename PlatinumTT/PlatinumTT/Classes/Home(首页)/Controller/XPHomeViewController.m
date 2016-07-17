@@ -10,6 +10,7 @@
 #import "DataManager.h"
 #import "NetworkManager.h"
 #import "UIImageView+WebCache.h"
+#import "XPNavigationController.h"
 
 #import "CitySearchViewController.h"
 #import "XPLoginViewController.h"
@@ -107,7 +108,8 @@
 }
 -(void)rightBarButtonAction{
     XPLoginViewController *LoginVC = [[XPLoginViewController alloc]init];
-    [self.navigationController pushViewController:LoginVC animated:YES];
+    XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:LoginVC];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 -(void)viewWillAppear:(BOOL)animated{

@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BmobSDK (1.7.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.10)
   - MOBFoundation_IDFA (2.0.7)
@@ -26,6 +27,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BmobSDK
   - MBProgressHUD
   - MJRefresh
   - MOBFoundation_IDFA
@@ -36,12 +38,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BmobSDK: ebc3cb46b90d746f23121e9ea058a3122b85861f
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
   MOBFoundation_IDFA: 965c0c4ae890a9732eb3e0261e26b078df9f7c63
   ShareSDK3: c76cb96eb38e079952b8157071486d945faa2df2
   SMSSDK: 85375419fc969dc9398ce9922c5165c1e14ebe23
 
-PODFILE CHECKSUM: a69cc885ab7d472c56c3cae64d5379cced645cb4
+PODFILE CHECKSUM: 8babf13be1e105a79b4025bd82f00a9bef4c2eec
 
 COCOAPODS: 1.0.1

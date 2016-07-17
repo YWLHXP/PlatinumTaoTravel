@@ -36,7 +36,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="确  定"/>
-                    <state key="highlighted" image="bgBtnDis.png"/>
+                    <state key="highlighted" backgroundImage="bgBtnDis.png"/>
                     <connections>
                         <action selector="sureButtonClick:" destination="-1" eventType="touchUpInside" id="vB4-iC-f27"/>
                     </connections>

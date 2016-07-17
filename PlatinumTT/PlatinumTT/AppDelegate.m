@@ -37,12 +37,40 @@
     //初始化SDK并且初始化第三方平台
     [self initializePlat];
     
+    //初始化Bmob
+    [Bmob registerWithAppKey:BMOBAPPKEY];
+    
+    //创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    //测试
-    XPNavigationController *nav = [[XPNavigationController alloc] initWithRootViewController:[[XPHomeViewController alloc] init]];
-    self.window.rootViewController = nav;
-    /*[[XPWelcomeViewController alloc] init];*/
+    // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    XPNavigationController *xpNav = [[XPNavigationController alloc] initWithRootViewController:[XPHomeViewController new]];
+    
+    //判断是否登录
+    if ([BmobUser getCurrentUser]) {
+        //登录过显示主页
+        self.window.rootViewController = xpNav;
+    }else
+    {
+        self.window.rootViewController = [[XPWelcomeViewController alloc] init];
+    }
+    
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![defaults boolForKey:@"first"]) {
+        // 设置窗口的根控制器
+        self.window.rootViewController = [[XPWelcomeViewController alloc] init];
+        self.isFirst = YES;
+        [defaults setBool:self.isFirst forKey:@"first"];
+        //同步 可以使内存中数据改变完之后 立即保存到文件中   不加也能保存 但是有可能不够及时
+        [defaults synchronize];
+    }else
+    {
+        // 设置窗口的根控制器
+        self.window.rootViewController = xpNav;
+    }
     return YES;
 }
 
