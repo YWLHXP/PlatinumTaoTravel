@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XPShareViewController">
+            <connections>
+                <outlet property="darkImageView" destination="aVz-2g-nQw" id="9bz-b9-5Ch"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-PN-p8N">
+                    <rect key="frame" x="0.0" y="467" width="375" height="200"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="hNW-E8-0aI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="想分享给谁" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StQ-4n-efa">
+                    <rect key="frame" x="149" y="481" width="76" height="21"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="76" id="GMu-8G-1w5"/>
+                        <constraint firstAttribute="height" constant="21" id="YjU-ar-tjP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCS-8H-JMU">
+                    <rect key="frame" x="20" y="515" width="335" height="1"/>
+                    <animations/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="02A-tB-UnY"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPl-CJ-Fyq">
+                    <rect key="frame" x="165" y="558" width="45" height="70"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="9mr-Q7-Ka4"/>
+                        <constraint firstAttribute="height" constant="70" id="qxB-2j-hHf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="titleEdgeInsets" minX="-60" minY="45" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="30"/>
+                    <state key="normal" title="朋友圈" image="BT_UMS_wechat_timeline_icon.png">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="friendBtnClick:" destination="-1" eventType="touchUpInside" id="jOu-9p-PSB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN2-d8-fjc">
+                    <rect key="frame" x="40" y="558" width="45" height="70"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="FCz-Ou-fBR"/>
+                        <constraint firstAttribute="width" constant="45" id="KhD-hI-lfx"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="titleEdgeInsets" minX="-60" minY="45" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="30"/>
+                    <state key="normal" title="微信好友" image="BT_UMS_wechat_icon.png">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="weixinBtnclick:" destination="-1" eventType="touchUpInside" id="Dzt-CI-dlZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="top" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h17-6z-wZu">
+                    <rect key="frame" x="290" y="558" width="45" height="70"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="cS8-hH-DVr"/>
+                        <constraint firstAttribute="width" constant="45" id="fLl-sa-4XH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="titleEdgeInsets" minX="-60" minY="45" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="30"/>
+                    <state key="normal" title="QQ" image="BT_UMS_qq_icon.png">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="qqBtnClick:" destination="-1" eventType="touchUpInside" id="6B1-d3-ZSm"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aVz-2g-nQw">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="465"/>
+                    <animations/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                </imageView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aVz-2g-nQw" secondAttribute="trailing" id="1nl-eW-5cL"/>
+                <constraint firstItem="HPl-CJ-Fyq" firstAttribute="leading" secondItem="TN2-d8-fjc" secondAttribute="trailing" constant="80" id="49B-rV-QcC"/>
+                <constraint firstItem="PCS-8H-JMU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="5Uu-t4-IZ5"/>
+                <constraint firstItem="HPl-CJ-Fyq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CFF-Az-bG3"/>
+                <constraint firstItem="h17-6z-wZu" firstAttribute="leading" secondItem="HPl-CJ-Fyq" secondAttribute="trailing" constant="80" id="I8y-Ol-wjq"/>
+                <constraint firstItem="fWn-PN-p8N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RwC-oP-kO1"/>
+                <constraint firstAttribute="bottom" secondItem="fWn-PN-p8N" secondAttribute="bottom" id="WyQ-2Y-nsw"/>
+                <constraint firstItem="fWn-PN-p8N" firstAttribute="top" secondItem="aVz-2g-nQw" secondAttribute="bottom" constant="2" id="ara-BC-njY"/>
+                <constraint firstItem="aVz-2g-nQw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fDY-5V-L8Y"/>
+                <constraint firstItem="aVz-2g-nQw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="gZe-Go-zhy"/>
+                <constraint firstAttribute="trailing" secondItem="PCS-8H-JMU" secondAttribute="trailing" constant="20" id="k0z-tx-mD1"/>
+                <constraint firstAttribute="trailing" secondItem="fWn-PN-p8N" secondAttribute="trailing" id="lpe-fY-TuU"/>
+                <constraint firstItem="PCS-8H-JMU" firstAttribute="top" secondItem="StQ-4n-efa" secondAttribute="bottom" constant="13" id="mcb-Cs-8Qb"/>
+                <constraint firstItem="h17-6z-wZu" firstAttribute="top" secondItem="PCS-8H-JMU" secondAttribute="bottom" constant="42" id="nWw-oi-KSQ"/>
+                <constraint firstAttribute="bottom" secondItem="h17-6z-wZu" secondAttribute="bottom" constant="39" id="qFj-nD-OXq"/>
+                <constraint firstItem="StQ-4n-efa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r7N-aR-LGe"/>
+                <constraint firstAttribute="bottom" secondItem="TN2-d8-fjc" secondAttribute="bottom" constant="39" id="rSt-dm-u7H"/>
+                <constraint firstAttribute="bottom" secondItem="HPl-CJ-Fyq" secondAttribute="bottom" constant="39" id="vPr-b7-FAb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="339.5" y="265.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BT_UMS_qq_icon.png" width="60" height="59"/>
+        <image name="BT_UMS_wechat_icon.png" width="60" height="60"/>
+        <image name="BT_UMS_wechat_timeline_icon.png" width="60" height="60"/>
+    </resources>
+</document>
