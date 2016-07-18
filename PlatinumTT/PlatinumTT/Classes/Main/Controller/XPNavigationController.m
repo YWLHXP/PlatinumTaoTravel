@@ -19,7 +19,7 @@
 + (void)initialize
 {
     UINavigationBar *bar = [UINavigationBar appearance];
-    bar.barTintColor = [UIColor colorWithRed:251/255.0 green:75/255.0 blue:18/255.0 alpha:1];
+    bar.barTintColor = [UIColor colorWithRed:255/255.0 green:113/255.0 blue:1/255.0 alpha:1];
     
     // 设置导航条标题颜色及字体
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
@@ -35,7 +35,7 @@
     if (self.childViewControllers.count > 0) {
         //push进来的是第一个控制器
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setImage:[UIImage imageNamed:@"ic-back"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:@"navBackBtn"] forState:UIControlStateNormal];
         button.size = CGSizeMake(30, 30);
         // 让按钮的内容往左边偏移10
         button.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);

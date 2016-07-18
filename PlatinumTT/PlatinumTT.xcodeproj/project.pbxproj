@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		42A5EC8F97F4F50D19AB2C01 /* libPods-PlatinumTT.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD78185DBD264B2044710D90 /* libPods-PlatinumTT.a */; };
+		850A934D1D3D03C900965ABD /* cityGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = 850A934C1D3D03C900965ABD /* cityGroups.plist */; };
+		850A93501D3D044500965ABD /* CityGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 850A934F1D3D044500965ABD /* CityGroupModel.m */; };
 		851E9B3C1D34D6D00085A5EA /* CitySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E9B3B1D34D6D00085A5EA /* CitySearchViewController.m */; };
 		851E9B3F1D34EF540085A5EA /* UIView+XPExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 851E9B3E1D34EF540085A5EA /* UIView+XPExtension.m */; };
 		851E9B991D3525600085A5EA /* backbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 851E9B871D3525600085A5EA /* backbutton.png */; };
@@ -99,6 +101,9 @@
 
 /* Begin PBXFileReference section */
 		0598B10FF0448F527731E471 /* Pods-PlatinumTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlatinumTT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlatinumTT/Pods-PlatinumTT.debug.xcconfig"; sourceTree = "<group>"; };
+		850A934C1D3D03C900965ABD /* cityGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cityGroups.plist; sourceTree = "<group>"; };
+		850A934E1D3D044500965ABD /* CityGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityGroupModel.h; sourceTree = "<group>"; };
+		850A934F1D3D044500965ABD /* CityGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityGroupModel.m; sourceTree = "<group>"; };
 		851E9B3A1D34D6D00085A5EA /* CitySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitySearchViewController.h; sourceTree = "<group>"; };
 		851E9B3B1D34D6D00085A5EA /* CitySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitySearchViewController.m; sourceTree = "<group>"; };
 		851E9B3D1D34EF540085A5EA /* UIView+XPExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XPExtension.h"; sourceTree = "<group>"; };
@@ -275,9 +280,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		850A934B1D3D03C900965ABD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				850A934C1D3D03C900965ABD /* cityGroups.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		851E9B361D34D5CA0085A5EA /* CitySearch(城市搜索) */ = {
 			isa = PBXGroup;
 			children = (
+				850A934B1D3D03C900965ABD /* Resources */,
 				851E9B371D34D67F0085A5EA /* Controller */,
 				851E9B381D34D67F0085A5EA /* Model */,
 				851E9B391D34D67F0085A5EA /* View */,
@@ -510,8 +524,7 @@
 				D8E999B11D3C596E00585AAE /* Tool */,
 				D8E999BA1D3C596E00585AAE /* View */,
 			);
-			name = "Home(首页)";
-			path = "../Home(首页)";
+			path = "Home(首页)";
 			sourceTree = "<group>";
 		};
 		D8E9996B1D3C596E00585AAE /* Controller */ = {
@@ -612,6 +625,8 @@
 				D8E999AE1D3C596E00585AAE /* BrandModel.m */,
 				D8E999AF1D3C596E00585AAE /* ThreeInOneModel.h */,
 				D8E999B01D3C596E00585AAE /* ThreeInOneModel.m */,
+				850A934E1D3D044500965ABD /* CityGroupModel.h */,
+				850A934F1D3D044500965ABD /* CityGroupModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -651,8 +666,7 @@
 				D8E999C81D3C596E00585AAE /* Model */,
 				D8E999C91D3C596E00585AAE /* View */,
 			);
-			name = "HotelDetail(酒店详情)";
-			path = "../HotelDetail(酒店详情)";
+			path = "HotelDetail(酒店详情)";
 			sourceTree = "<group>";
 		};
 		D8E999C21D3C596E00585AAE /* Controller */ = {
@@ -743,7 +757,7 @@
 				TargetAttributes = {
 					D81DFE931D33CDC40078BE2D = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = T2L32V8665;
+						DevelopmentTeam = 6GRC885B53;
 					};
 				};
 			};
@@ -773,6 +787,7 @@
 				851E9BA41D3525600085A5EA /* ic-qq@2x.png in Resources */,
 				851E9B9B1D3525600085A5EA /* backbutton@3x.png in Resources */,
 				D81DFEA71D33CDC40078BE2D /* LaunchScreen.storyboard in Resources */,
+				850A934D1D3D03C900965ABD /* cityGroups.plist in Resources */,
 				851E9BA31D3525600085A5EA /* ic-phone@3x.png in Resources */,
 				851E9BAA1D3525600085A5EA /* weizhi.png in Resources */,
 				D8D9D6C71D39D4DC00A363A2 /* XPAddInformationViewController.xib in Resources */,
@@ -903,6 +918,7 @@
 				D8E999D01D3C596E00585AAE /* XPHomeViewController.m in Sources */,
 				D8280F891D38FBE200A72E15 /* XPMyMessageViewController.m in Sources */,
 				D8E999E81D3C596E00585AAE /* UIImageView+WebCache.m in Sources */,
+				850A93501D3D044500965ABD /* CityGroupModel.m in Sources */,
 				D8E999E61D3C596E00585AAE /* UIImage+MultiFormat.m in Sources */,
 				D8E999E41D3C596E00585AAE /* UIButton+WebCache.m in Sources */,
 				D8E999EC1D3C596E00585AAE /* ThreeInOneModel.m in Sources */,
@@ -1026,7 +1042,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlatinumTT/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = PlatinumTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = win.com.cn.PlatinumTT;
+				PRODUCT_BUNDLE_IDENTIFIER = PlatinumTT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1043,7 +1059,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PlatinumTT/Others/PrefixHeader.pch";
 				INFOPLIST_FILE = PlatinumTT/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = win.com.cn.PlatinumTT;
+				PRODUCT_BUNDLE_IDENTIFIER = PlatinumTT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

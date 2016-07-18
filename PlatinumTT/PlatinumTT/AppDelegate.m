@@ -51,11 +51,9 @@
     if ([BmobUser getCurrentUser]) {
         //登录过显示主页
         self.window.rootViewController = xpNav;
-    }else
-    {
+    }else{
         self.window.rootViewController = [[XPWelcomeViewController alloc] init];
     }
-    
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
@@ -66,8 +64,7 @@
         [defaults setBool:self.isFirst forKey:@"first"];
         //同步 可以使内存中数据改变完之后 立即保存到文件中   不加也能保存 但是有可能不够及时
         [defaults synchronize];
-    }else
-    {
+    }else{
         // 设置窗口的根控制器
         self.window.rootViewController = xpNav;
     }
@@ -75,12 +72,10 @@
 }
 
 
-- (void)initializePlat
-{
+- (void)initializePlat{
     [ShareSDK registerApp:MOBAPPKEY_3Login
      
-          activePlatforms:@[
-                            @(SSDKPlatformTypeWechat),
+          activePlatforms:@[@(SSDKPlatformTypeWechat),
                             @(SSDKPlatformTypeQQ),]
                  onImport:^(SSDKPlatformType platformType)
      {
@@ -92,7 +87,7 @@
              case SSDKPlatformTypeQQ:
                  [ShareSDKConnector connectQQ:[QQApiInterface class] tencentOAuthClass:[TencentOAuth class]];
                  break;
-              default:
+             default:
                  break;
          }
      }
@@ -107,7 +102,7 @@
              case SSDKPlatformTypeQQ:
                  [appInfo SSDKSetupQQByAppId:MOBAPPKEY_QQ appKey:MOBAPPSECRECT_QQ authType:SSDKAuthTypeBoth];
                  break;
-            default:
+             default:
                  break;
          }
      }];

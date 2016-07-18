@@ -1,12 +1,12 @@
 platform :ios, ‘9.0’
 target 'PlatinumTT' do
-pod 'AFNetworking'
-pod 'MBProgressHUD'
-pod 'MJRefresh'
-pod 'SMSSDK'
-pod 'MOBFoundation_IDFA'
-pod 'ShareSDK3'
-pod 'ShareSDK3/ShareSDKPlatforms/QQ'
-pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
-pod 'BmobSDK'
+    pod 'AFNetworking'
+    pod 'MBProgressHUD'
+    pod 'MJRefresh'
+    pod 'SMSSDK'
+    pod 'MOBFoundation_IDFA'
+    pod 'ShareSDK3'
+    pod 'ShareSDK3/ShareSDKPlatforms/QQ'
+    pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+    pod 'BmobSDK'
 end
