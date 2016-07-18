@@ -35,6 +35,7 @@
 @property (nonatomic, strong) NSTimer *timer;
 /** isPhoneNumber */
 @property (nonatomic, assign) BOOL isPhoneNumber;
+
 @end
 
 @implementation XPLoginViewController
@@ -232,12 +233,6 @@
         [self showTooltip:@"请求超时，请重新获取"];
     }
 }
-
-//-(void)dealloc
-//{
-//    [self.timer invalidate];
-//    [self.getCodeButton setTitle:@"获取验证码" forState:UIControlStateNormal];
-//}
 
 #pragma mark - QQ登录
 - (IBAction)qqLogin:(id)sender {
